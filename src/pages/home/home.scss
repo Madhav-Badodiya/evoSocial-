@@ -1,0 +1,17 @@
+@import "../../style.scss";
+
+
+.home{
+ padding: 20px 50px;
+ background-color: whitesmoke;
+
+
+     @include mobile{
+        padding: 10px;
+    }
+
+
+    @include tablet{
+        padding: 20px;
+     }
+}

@@ -1,0 +1,89 @@
+@import "../../style.scss";
+
+.rightBar{
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+
+    @include mobile{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .container{
+        padding: 20px;
+        .item{
+            -webkit-box-shadow: -1px 1px 10px 0px rgba(225, 223, 223, 0.7);
+            -moz-box-shadow: -1px 1px 10px 0px rgba(227, 224, 224, 0.7);
+             box-shadow: -1px 1px 10px 0px rgba(203, 200, 200, 0.7);
+             padding: 20px;
+             margin-bottom: 20px;
+            span{
+                color: rgb(0, 0, 0);
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0px;
+                
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    position: relative;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .online{
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: limegreen;
+                        position: absolute;
+                        top: 0;
+                        left: 30px;
+                    }
+
+                    p{
+                        color: rgb(72, 72, 72);
+                    }
+
+                    span{
+                        font-weight: 600;
+                    }
+                }
+                .buttons{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                }
+                button{
+                    border: none;
+                    padding: 5px;
+                    cursor: pointer;
+                    color: white;
+                    border-radius: 2px;
+                    &:first-child{
+                        background-color: rgb(26, 71, 168);
+                    }
+                    &:last-child{
+                        background-color: rgb(185, 36, 30);
+                    }
+                }
+               
+            }
+        }
+    }
+}
